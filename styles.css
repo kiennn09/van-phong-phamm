@@ -220,6 +220,7 @@ nav ul li a:hover {
   padding: 8px 12px;
   border-radius: 20px;
   transition: background 0.3s ease;
+  cursor: pointer;
 }
 
 #user-info:hover {
@@ -241,6 +242,10 @@ nav ul li a:hover {
   z-index: 100;
 }
 
+.user-dropdown.active {
+  display: block;
+}
+
 .user-dropdown a {
   display: block;
   padding: 10px 15px;
@@ -250,10 +255,6 @@ nav ul li a:hover {
 
 .user-dropdown a:hover {
   background: #f0f0f0;
-}
-
-#user-info:hover .user-dropdown {
-  display: block;
 }
 
 #logout-btn {
