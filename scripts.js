@@ -492,6 +492,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // User dropdown toggle
+  const userInfo = document.getElementById('user-info');
+  const userDropdown = document.querySelector('.user-dropdown');
+  if (userInfo && userDropdown) {
+    userInfo.addEventListener('click', (e) => {
+      e.stopPropagation(); // Prevent click from bubbling to document
+      userDropdown.classList.toggle('active');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!userInfo.contains(e.target) && !userDropdown.contains(e.target)) {
+        userDropdown.classList.remove('active');
+      }
+    });
+  }
+
   // Authentication event listeners
   const loginForm = document.getElementById('login-form');
   const registerForm = document.getElementById('register-form');
