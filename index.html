@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang chủ</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <img src="images/logo.png" alt="Logo" class="logo-img">
+      <div class="hamburger">☰</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Trang chủ</a></li>
+          <li class="dropdown">
+            <a href="#">Sản phẩm</a>
+            <div class="dropdown-content">
+              <a href="#" data-category="pen">Bút viết</a>
+              <a href="#" data-category="notebook">Sổ & Vở</a>
+              <a href="#" data-category="tool">Giấy in</a>
+              <a href="#" data-category="stationery">Máy tính Casio</a>
+            </div>
+          </li>
+          <li><a href="lienhe.html">Liên hệ</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <div class="search-container">
+          <input type="text" id="search-input" class="search-bar" placeholder="Tìm kiếm sản phẩm...">
+          <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+          <svg class="search-clear" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </div>
+        <a href="cart.html" class="btn cart">Giỏ hàng (<span id="cart-count">0</span>)</a>
+        <div class="login-status">
+          <a href="auth.html" class="btn" id="login-btn">Đăng nhập</a>
+          <div id="user-info" style="display: none;">
+            <span>Xin chào, <span id="user-name"></span></span>
+            <div class="user-dropdown">
+              <a href="profile.html">Hồ sơ</a>
+              <a href="#" id="logout-btn">Đăng xuất</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="banner">
+    <div class="slideshow-container">
+      <div class="slide">
+        <img src="images/but.png" alt="Banner 1">
+      </div>
+      <div class="slide">
+        <img src="images/giayin.png" alt="Banner 2">
+      </div>
+      </div>
+      <div class="slide">
+        <img src="images/maytinh.png" alt="Banner 2">
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+      <div class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="products">
+    <div class="container">
+      <h2>Sản phẩm nổi bật</h2>
+      <div id="product-grid" class="product-grid"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-section">
+        <h3>Về chúng tôi</h3>
+        <p>Cửa hàng văn phòng phẩm chất lượng, cung cấp đa dạng sản phẩm từ bút, vở đến dụng cụ học tập.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Liên hệ</h3>
+        <p>Email: <a href="mailto:contact@stationery.com">contact@stationery.com</a></p>
+        <p>Hotline: 0862 051 226</p>
+        <p>Địa chỉ: Mỹ Đình 2, Hà Nội</p>
+      </div>
+      <div class="footer-section">
+        <h3>Theo dõi chúng tôi</h3>
+        <div class="social-links">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">Shopee</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="scripts.js"></script>
+</body>
+</html>
